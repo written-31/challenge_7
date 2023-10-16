@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.c-section-title {
+  color: $black;
+  font-size: myrem(20);
+  font-weight: bold;
+  line-height: 1.7;
+
+  @include mq('md') {
+    font-size: myrem(40);
+  }
+}

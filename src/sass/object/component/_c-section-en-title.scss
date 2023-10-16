@@ -1,0 +1,12 @@
+@use 'global' as *;
+.c-section-en-title {
+  font-size: myrem(60);
+  font-family: $font-en;
+  font-weight: $bold;
+  text-transform: uppercase;
+  opacity: 0.03;
+
+  @include mq('md') {
+    font-size: myrem(160);
+  }
+}
