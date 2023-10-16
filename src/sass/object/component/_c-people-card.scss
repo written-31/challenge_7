@@ -1,0 +1,61 @@
+@use 'global' as *;
+.c-people-card {
+  display: inline-block;
+  background-image: url(../images/people_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 520/620;
+  position: relative;
+}
+
+.c-people-card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,.7) 100%);
+}
+
+.c-people-card__label,
+.c-people-card__category {
+  font-weight: $regular;
+  letter-spacing: .04em;
+  line-height: calc(18/16);
+  padding: myrem(16) myrem(8);
+  background-color: $white;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  position: absolute;
+  z-index: 1;
+}
+
+
+
+.c-people-card__category {
+  top: 0;
+  left: myrem(48);
+}
+
+.c-people-card__label {
+  top: 0;
+  left: myrem(88);
+}
+
+.c-people-card__text {
+  color: $white;
+  font-size: vw(375, 20);
+  letter-spacing: .04em;
+  font-weight: $bold;
+  position: absolute;
+  bottom: myrem(48);
+  left: myrem(48);
+  z-index: 1;
+
+  @include mq('md') {
+    font-size: vw(520, 32);
+  }
+}
+

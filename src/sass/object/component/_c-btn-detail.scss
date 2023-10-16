@@ -1,0 +1,59 @@
+@use 'global' as *;
+.c-btn-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: myrem(164);
+  transition: .3s;
+}
+
+.c-btn-detail__arrow {
+  width: myrem(60);
+  height: myrem(60);
+  border-radius: 50%;
+  border: 1px solid $black;
+  background-color: $black;
+  position: relative;
+}
+
+.c-btn-detail__arrow::after {
+  content: "";
+  background-image: url(../images/btn-detail.svg);
+  background-size: contain;
+  width: myrem(7);
+  height: myrem(12);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-btn-detail__text {
+  font-size: myrem(16);
+  font-weight: $regular;
+}
+
+// ホバー時
+.c-btn-detail:hover {
+  opacity: 1;
+  transition: .3s;
+}
+
+.c-btn-detail:hover .c-btn-detail__arrow {
+  background-color: $white;
+  transition: .3s;
+}
+
+.c-btn-detail:hover .c-btn-detail__arrow::after {
+  background-image: none;
+
+	-webkit-mask-image: url(../images/btn-detail.svg);
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+
+	mask-image: url(../images/btn-detail.svg);
+	mask-size: contain;
+	mask-repeat: no-repeat;
+
+  background-color: $black;
+}

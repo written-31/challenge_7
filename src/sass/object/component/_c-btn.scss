@@ -1,0 +1,30 @@
+@use 'global' as *;
+.c-btn {
+  display: inline-block;
+  text-align: center;
+  font-size: myrem(16);
+  font-weight: $regular;
+  padding: myrem(24);
+  min-width: myrem(256);
+  background-color: $white;
+  transition: .3s;
+  position: relative;
+}
+
+.c-btn span {
+  position: absolute;
+  background-image: url(../images/btn-arrow.svg);
+  background-size: contain;
+  width: myrem(7);
+  height: myrem(12);
+  position: absolute;
+  top: 50%;
+  right: myrem(26);
+  transform: translateY(-50%);
+}
+
+// ホバー時
+.c-btn:hover {
+  opacity: 1;
+  background-color: rgba($white, 0.7);
+}
