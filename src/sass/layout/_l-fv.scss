@@ -1,0 +1,8 @@
+@use 'global' as *;
+.l-fv {
+  margin-top: myrem(52);
+
+  @include mq('md') { 
+    margin-top: myrem(80);
+  }
+}

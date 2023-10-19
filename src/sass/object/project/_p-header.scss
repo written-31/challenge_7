@@ -1,0 +1,143 @@
+@use 'global' as *;
+.p-header {
+  width: 100%;
+  height: myrem(52);
+  background-color: $white;
+  padding-right: myrem(12);
+  padding-left: myrem(12);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 myrem(4) myrem(10) rgba($color: #4f4f4f, $alpha: 0.08);
+  
+  @include mq('md') {
+    height: myrem(80);
+    padding-left: myrem(32);
+    padding-right: initial;
+  }
+}
+
+.p-header__inner {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+
+// ハンバーガーメニューボタン
+.p-header__hamburger {
+  width: myrem(24);
+  height: myrem(52);
+  padding: myrem(18) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq('md') {
+    display: none;
+  }
+}
+
+.p-header__hamburger span {
+  display: inline-block;
+  width: inherit;
+  height: 2px;
+  background-color: $black;
+  transition: .5s;
+  border-radius: 2px;
+}
+
+
+.p-header__hamburger.open span:nth-child(1) {
+  transform: translateY(myrem(5)) rotate(45deg);
+}
+.p-header__hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.p-header__hamburger.open span:nth-child(3) {
+  transform: translateY(myrem(-8)) rotate(-45deg);
+}
+// 
+
+.p-header__logo {
+  width: myrem(107);
+  height: inherit;
+  margin-right: auto;
+  @include mq('md') {
+    width: myrem(157);
+  }
+}
+
+.p-header__logo a{
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.p-header__logo img {
+  width: 100%;
+}
+
+.p-header__nav {
+  display: none;
+
+  @include mq('md') {
+    display: flex;
+    height: inherit;
+    margin-left: auto;
+  }
+}
+
+.p-header__items {
+  @include mq('md') {
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+}
+
+.p-header__item {
+  color: $black;
+
+  @include mq('md') {
+    height: inherit;
+  }
+}
+
+.p-header__link {
+  font-size: myrem(15);
+
+  @include mq('md') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    text-align: center;
+    position: relative;
+    padding-left: myrem(20);
+    padding-right: myrem(20);
+  }
+
+  @include mq('lg') {
+    padding-left: myrem(20);
+    padding-right: myrem(20);
+  }
+}
+
+.p-header__btn {
+  height: inherit;
+  background-color: $black;
+  color: $white;
+  font-size: myrem(16);
+  font-weight: $medium;
+  text-transform: uppercase;
+  letter-spacing:.04em;
+
+  @include mq('md') {
+    width: myrem(160);
+    margin-left: myrem(20);
+  }
+}
+

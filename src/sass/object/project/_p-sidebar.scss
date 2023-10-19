@@ -1,0 +1,30 @@
+@use 'global' as *;
+.p-sidebar {
+
+}
+
+.p-sidebar__items {
+  position: sticky;
+  top: myrem(100);
+}
+
+.p-sidebar__item + .p-sidebar__item {
+  margin-top: myrem(16);
+
+  @include mq('md') {
+    margin-top: myrem(32);
+  }
+}
+
+.c-btn-about {
+
+}
+
+.c-btn-about__arrow {
+
+}
+
+.c-btn-about__text {
+
+}
+

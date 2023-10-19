@@ -1,0 +1,117 @@
+@use "global" as *;
+
+.p-top-message {
+  position: relative;
+  padding-top: myrem(56);
+  padding-bottom: myrem(56);
+  margin-bottom: myrem(180);
+  background: linear-gradient(150deg, rgba(#000,1) 50%, rgba(#580F14,1) 100%);
+  width: calc((351 / 375) * 100%);
+
+  
+  @include mq('md') {
+    padding-top: myrem(506);
+    margin-top: myrem(-330);
+    padding-bottom: myrem(160);
+    margin-bottom: myrem(80);
+    width: calc((1360 / 1440) * 100%);
+  }
+}
+
+
+// .p-top-message::before {
+//   position: absolute;
+//   z-index: -1;
+//   content: "";
+//   width: calc((351 / 375) * 100%);
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   margin-right: auto;
+//   background: linear-gradient(150deg, rgba(#000,1) 50%, rgba(#580F14,1) 100%);
+  
+  
+//   @include mq('md') {
+//     width: calc((1360 / 1440) * 100%);
+//     top: myrem(-386);
+//   }
+// }
+
+.p-top-message__bg-text {
+  font-size: myrem(70);
+  letter-spacing: .08em;
+  font-weight: $ex-bold;
+  font-family: $font-en;
+  color: rgba($color: $white, $alpha: 0.12);
+  line-height: 1;
+  position: absolute;
+  // top: myrem(12);
+
+  @include mq('md') {
+    font-size: myrem(240);
+    top: myrem(386);
+    width: calc((1125 / 1440) * 100%);
+    margin-left: myrem(80);
+  }
+}
+
+.p-top-message__content {
+}
+
+.p-top-message__title {
+  color: $white;
+  font-weight: $bold;
+  font-size: myrem(22);
+  line-height: 1.7;
+
+  @include mq('md') {
+    font-size: myrem(48);
+  }
+}
+
+.p-top-message__text {
+  color: $white;
+  font-size: myrem(16);
+  line-height: 2;
+  font-weight: $regular;
+  margin-top: myrem(24);
+  width: calc((316 / 351) * 100%);
+  
+  @include mq('md') {
+    font-size: myrem(22);
+    line-height: 2.6;
+    width: calc((528 / 1125) * 100%);
+
+  }
+}
+
+.p-top-message__img {
+  width: calc((323 / 375) * 100%);
+  aspect-ratio: 323/182;
+  position: absolute;
+  right: 0;
+  bottom: myrem(-216);
+  
+  @include mq('md') {
+    width: calc((682 / 1440) * 100%);
+    bottom: myrem(-80);
+  }
+}
+
+.p-top-message__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  display: inline-block;
+}
+
+.p-top-message__img img::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: 0.3;
+  z-index: 1;
+}

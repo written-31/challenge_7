@@ -1,0 +1,87 @@
+@use 'global' as *;
+.c-btn-about {
+  display: inline-flex;
+  align-items: center;
+  gap: myrem(16);
+  justify-content: center;
+  transition: .3s;
+}
+
+.c-btn-about__arrow {
+  width: myrem(32);
+  height: myrem(32);
+  border-radius: 50%;
+  border: 1px solid $black;
+  background-color: $black;
+  position: relative;
+}
+
+.c-btn-about__arrow::after {
+  content: "";
+  background-image: url(../images/btn-detail.svg);
+  background-size: contain;
+  width: myrem(5);
+  height: myrem(8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-btn-about__text {
+  font-size: myrem(16);
+  font-weight: $regular;
+}
+
+// ホバー時
+.c-btn-about:hover {
+  @include mq('md') {
+    opacity: 1;
+    transition: .3s;
+  }
+}
+
+.c-btn-about:hover .c-btn-about__arrow {
+  @include mq('md') { 
+    background-color: $white;
+    transition: .3s;
+  }
+}
+
+.c-btn-about:hover .c-btn-about__arrow::after {
+  @include mq('md') {
+    
+    background-image: none;
+    
+    -webkit-mask-image: url(../images/btn-detail.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    
+    mask-image: url(../images/btn-detail.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    
+    background-color: $black;
+  }
+}
+
+// 白色版
+.c-btn-about__arrow--white {
+  border: 1px solid $white;
+  background-color: transparent;
+}
+
+.c-btn-about:hover .c-btn-about__arrow--white {
+  @include mq('md') {  
+    background-color: transparent;
+  }
+}
+.c-btn-about:hover .c-btn-about__arrow--white::after {
+  @include mq('md') {   
+    background-color: $white;
+  }
+}
+
+.c-btn-about__text--white {
+  color: $white;
+}

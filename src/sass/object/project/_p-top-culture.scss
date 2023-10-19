@@ -1,0 +1,105 @@
+@use 'global' as *;
+
+.p-top-culture__title {
+  text-align: center;
+  position: relative;
+}
+
+.p-top-culture__title .c-section-en-title {
+  position: absolute;
+  bottom: myrem(-20);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  @include mq('md') {
+    bottom: myrem(-58);
+  }
+}
+
+.p-top-culture__text {
+  text-align: center;
+  margin-top: myrem(24);
+  font-size: myrem(16);
+  font-weight: $regular;
+  line-height: 1.9;
+}
+
+.p-top-culture__items {
+  margin-top: myrem(24);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  
+  @include mq('md') {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: myrem(64);
+  }
+}
+
+.p-top-culture__item a {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-top-culture__item a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.p-top-culture__item a:hover {
+  @include mq('md') {
+    opacity: 1;
+  }
+}
+
+.p-top-culture__item a:hover:before {
+  @include mq('md') {
+    opacity: 1;
+  }
+}
+
+.p-top-culture__item a:hover img {
+  @include mq('md') {
+    transform: scale(1.05);
+  }
+}
+
+.p-top-culture__item img {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: ease .3s;
+}
+
+.p-top-culture__sub-title {
+  font-size: myrem(20);
+  font-weight: $bold;
+  line-height: 1.7;
+  color: $white;
+
+  @include mq('md') {
+    font-size: myrem(32);
+  }
+}
+
+.p-top-culture__btn {
+  margin-top: myrem(24);
+}
