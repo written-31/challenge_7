@@ -2,7 +2,8 @@
 .c-btn-detail {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  gap: myrem(24);
+  justify-content: center;
   min-width: myrem(164);
   transition: .3s;
 }
@@ -56,4 +57,21 @@
 	mask-repeat: no-repeat;
 
   background-color: $black;
+}
+
+// 白色版
+.c-btn-detail__arrow--white {
+  border: 1px solid $white;
+  background-color: transparent;
+}
+
+.c-btn-detail:hover .c-btn-detail__arrow--white {
+  background-color: transparent;
+}
+.c-btn-detail:hover .c-btn-detail__arrow--white::after {
+  background-color: $white;
+}
+
+.c-btn-detail__text--white {
+  color: $white;
 }

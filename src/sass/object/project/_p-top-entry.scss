@@ -1,0 +1,60 @@
+@use 'global' as *;
+.p-top-entry__btn a {
+  display: inline-block;
+  width: 100%;
+  padding-top: myrem(40);
+  padding-bottom: myrem(40);
+  background-color: $red;
+  margin-top: myrem(-85);
+  position: relative;
+  z-index: 1;
+  
+  @include mq('md') {
+    padding-top: myrem(80);
+    padding-bottom: myrem(80);
+    margin-top: myrem(-150);
+    transition: .3s;
+  }
+}
+
+.p-top-entry__btn a:hover {
+  @include mq('md') {
+    opacity: 1;
+    background-color: $black;
+  }
+}
+
+.l-inner.p-top-entry__inner {
+  width: 100%;
+
+  @include mq('md') {
+    max-width: myrem(1280);
+  }
+}
+
+.p-top-entry__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+}
+
+.p-top-entry__btn-title {
+  font-weight: $bold;
+  font-family: $font-en;
+  line-height: 1;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: myrem(50);
+
+  @include mq('md') {
+    font-size: myrem(80);
+  }
+}
+
+.p-top-entry__btn-text {
+  font-size: myrem(16);
+  font-weight: $regular;
+  margin-top: myrem(16);
+}
+

@@ -35,4 +35,52 @@ jQuery(function ($) {
     return false;
   });
 
+  $(function(){
+    // 各 .p-qa__content 内の最初の .p-qa__a 要素を非表示
+    $('.p-qa__content .p-qa__item .p-qa__a').hide();
+
+    // 最初の .p-qa__a 要素だけを表示
+    $('.p-qa__content .p-qa__item:first-child .p-qa__a').show();
+
+    // p-qa__qをクリックした時の処理
+    $('.p-qa__q').click(function() {
+      // クリックされたp-qa__qの次の要素（p-qa__a）をスライドトグル（開閉）する
+      $(this).next('.p-qa__a').slideToggle();
+    });
+
+  });
+
+
+    //ハンバーガーメニュー
+    // $(".js-hamburger").on("click", function () {
+    //   $(this).toggleClass("open");
+    //   if ($(this).hasClass("open")) {
+    //     $(".js-nav").fadeIn();
+    //     $(".p-header").addClass("transparent");
+    //     $("body").css("overflow", "hidden"); // スクロール無効化
+    //   } else {
+    //     $(".js-nav").fadeOut();
+    //     $(".p-header").removeClass("transparent");
+    //     $("body").css("overflow", "auto"); // スクロール有効化
+    //   }
+    // });
+
+    $(".js-hamburger").on("click", function () {
+      $(this).toggleClass("open");
+      if ($(this).hasClass("open")) {
+        $(".js-nav").fadeIn();
+        $(".p-header").addClass("transparent");
+        $(".p-header-bg").fadeIn(); // バックグラウンドを表示
+        $("body").css("overflow", "hidden"); // スクロール無効化
+      } else {
+        $(".js-nav").fadeOut();
+        $(".p-header").removeClass("transparent");
+        $(".p-header-bg").fadeOut(); // バックグラウンドを非表示
+        $("body").css("overflow", "auto"); // スクロール有効化
+      }
+    });
+    
+
 });
+
+

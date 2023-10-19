@@ -1,0 +1,130 @@
+@use 'global' as *;
+.p-qa {
+}
+
+.p-qa__wrapper {
+  display: grid;
+  grid-template:
+    "...  .....    ..." auto
+    "...  sidebar   ..." auto
+    "...  .....    ..." myrem(60)
+    "...   main    ..." auto
+    "...  .....    ..." auto
+    / auto auto auto;
+  
+  @include mq('md') {
+    grid-template:
+      "... ...... ...... ......  ..."
+      "... sidebar ...... main ..."
+      "... ...... ...... ......  ..."
+      / auto myrem(192) myrem(83) myrem(765) auto;
+  }
+}
+
+.p-qa__sidebar {
+  grid-area: sidebar;
+
+}
+
+.p-qa__contents {
+  grid-area: main;
+}
+
+.p-qa__content {
+  width: 100%;
+
+}
+.p-qa__content + .p-qa__content {
+  margin-top: myrem(40);
+
+  @include mq('md') {
+    margin-top: myrem(80);
+  }
+}
+
+.p-qa__title {
+  font-size: myrem(20);
+  line-height: 1.7;
+  font-weight: $bold;
+
+  @include mq('md') {
+    font-size: myrem(28);
+  }
+}
+
+.p-qa__items {
+  margin-top: myrem(16);
+  background-color: $light_grey;
+  padding-top: myrem(16);
+  padding-right: myrem(16);
+  padding-left: myrem(16);
+  padding-bottom: myrem(20);
+
+  @include mq('md') {
+    margin-top: myrem(24);
+    padding-top: myrem(32);
+    padding-right: myrem(24);
+    padding-left: myrem(24);
+    padding-bottom: myrem(29);
+  }
+}
+
+.p-qa__item + .p-qa__item {
+  margin-top: myrem(20);
+
+  @include mq('md') {
+    margin-top: myrem(40);
+  }
+}
+
+.p-qa__q {
+  background-color: $white;
+  display: flex;
+  padding: myrem(17) myrem(40) myrem(17) myrem(24);
+  position: relative;
+  box-shadow: 0 myrem(4) myrem(16) rgba($color: #000000, $alpha: 0.08);
+}
+.p-qa__q::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../images/arrow_bottom.svg) center center no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  right: myrem(24);
+}
+
+.p-qa__q::before {
+  content: "";
+  display: inline-block;
+  width: 31px;
+  height: 30px;
+  background: url(../images/qa_q.svg) center center no-repeat;
+  margin-right: myrem(24);
+}
+
+.p-qa__a {
+  display: none;
+  display: flex;
+  padding: 0 myrem(24);
+  margin-top: myrem(24);
+  font-size: myrem(14);
+  font-weight: $regular;
+  letter-spacing: .04em;
+  line-height: 1.8;
+}
+
+.p-qa__a::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  background: url(../images/qa_a.svg) center center no-repeat;
+  margin-right: myrem(24);
+
+  @include mq('md') {
+    width: 27px;
+  }
+}
+

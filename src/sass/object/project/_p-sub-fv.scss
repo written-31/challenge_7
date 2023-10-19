@@ -1,0 +1,23 @@
+@use 'global' as *;
+.p-sub-fv {
+  padding-top: myrem(40);
+  padding-bottom: myrem(40);
+  background: linear-gradient(150deg, rgba(#000,1) 0%, rgba(#580F14,1) 100%);
+  
+  @include mq('md') {
+    padding-top: myrem(80);
+    padding-bottom: myrem(80);
+  }
+}
+
+.p-fv__title {
+  font-size: myrem(24);
+  color: $white;
+  text-align: center;
+  font-weight: $bold;
+
+  @include mq('md') {
+    font-size: myrem(40);
+    text-align: left;
+  }
+}

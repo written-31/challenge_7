@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
       rel="stylesheet"
     />
     <!-- css -->
@@ -31,7 +31,276 @@
     <script defer src="./js/script.js"></script>
   </head>
   <body>
-    <div class="l-inner"></div>
+    <header class="p-header">
+      <div class="p-header__inner">
+        <h1 class="p-header__logo">
+          <a href="/">
+            <img src="./images/logo.svg" alt="cocomate" />
+          </a>
+        </h1>
+        <button class="p-header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="p-header__nav u-desktop">
+          <ul class="p-header__items">
+            <li class="p-header__item">
+              <a href="#" class="p-header__link">
+                会社を知る
+              </a>
+            </li>
+            <li class="p-header__item">
+              <a href="#" class="p-header__link">
+                事業を知る
+              </a>
+            </li>
+            <li class="p-header__item">
+              <a href="#" class="p-header__link">
+                人を知る
+              </a>
+            </li>
+            <li class="p-header__item">
+              <a href="#" class="p-header__link">
+                働く環境
+              </a>
+            </li>
+            <li class="p-header__item">
+              <a href="#" class="p-header__link">
+                採用情報
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="p-header__btn u-desktop">entry</button>
+      </div>
+    </header>
+    <div class="p-header-bg"></div>
+    <div class="p-header-content u-mobile js-nav">
+      <nav class="p-header-content__nav p-menu">
+        <div class="p-header-content__nav-wrapper p-menu__wrapper">
+          <ul class="p-menu__items">
+            <li class="p-menu__item">
+              <a href="#">会社を知る</a>
+            </li>
+            <li class="p-menu__item">
+              <a href="#">事業を知る</a>
+            </li>
+            <li class="p-menu__item">
+              <a href="#">人を知る</a>
+            </li>
+            <li class="p-menu__item">
+              <a href="#">働く環境</a>
+            </li>
+            <li class="p-menu__item">
+              <a href="#">採用情報</a>
+            </li>
+          </ul>
+          <button class="p-menu__btn">entry</button>
+        </div>
+      </nav>
+    </div>
+
+
+    <main>
+      <div class="p-fv l-fv">
+        <div class="p-fv__img">
+          <picture>
+            <!-- ↓幅800px以上で表示↓ -->
+            <source srcset="./images/fv.jpg" media="(min-width: 768px)" />
+            <!-- ↓上記全て表示条件に当てはまらない場合に表示↓ -->
+            <img src="./images/fv_sp.jpg" alt="ファーストビュー" />
+          </picture>
+        </div>
+        <div class="p-fv__scroll">SCROLL<span class="p-fv__line"></span></div>
+      </div>
+
+      <div class="p-top-message l-top-message">
+        <div class="p-top-message__bg-text">
+          MAKE <br />
+          DREAMS <br />
+          COME <br />
+          TRUE
+        </div>
+        <div class="l-inner">
+          <div class="p-top-message__content">
+            <div class="p-top-message__title">
+              できない理由を探すなら<br />
+              できる方法を探す自分でいたい
+            </div>
+            <p class="p-top-message__text">
+              やらない自分と挑戦する自分あなたはどっちが好き？<br />
+              やりたいことがあるなら、自分から手を挙げて<br />
+              新しいことに挑戦しよう。仲間と語ろう。<br />
+              COCOMATEには、お互いの好きなことや 得意なことを持ち寄って、<br />
+              年齢や職種の垣根を越えてつながれる仲間がいる。<br />
+              これからたくさんの出会いを通じて ひとつずつ夢をかなえていこう。
+            </p>
+          </div>
+          <div class="p-top-message__img">
+            <img src="./images/top-message.jpg" alt="会議中の風景" />
+          </div>
+        </div>
+      </div>
+
+      <section class="p-top-company l-top-company">
+        <div class="l-inner">
+          <div class="p-top-company__img">
+            <img src="./images/company.jpg" alt="仕事現場" />
+          </div>
+          <div class="p-top-company__img-bg">
+            <img src="./images/company.jpg" alt="" />
+          </div>
+          <div class="p-top-company__body">
+            <div class="p-top-company__title">
+              <h2 class="c-section-title">会社を知る</h2>
+            </div>
+            <p class="p-top-company__text">
+              世界中の人々の夢を<br />
+              WEBの技術力と人の力で実現するCOCOMATE。<br />
+              私たちのことをまずはお伝えします。
+            </p>
+            <div class="p-top-company__btn">
+              <a href="#" class="c-btn-detail">
+                <span class="c-btn-detail__arrow"></span>
+                <span class="c-btn-detail__text">詳しく見る</span>
+              </a>
+            </div>
+            <div class="p-top-company__en-title c-section-en-title">
+              company
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-top-culture l-top-culture">
+        <div class="l-inner p-top-culture__inner">
+          <div class="p-top-culture__title">
+            <div class="c-section-en-title">culture</div>
+            <h2 class="c-section-title">働く環境</h2>
+          </div>
+          <div class="p-top-culture__text">
+            COCOMATEはワークライフバランスを重視し、<br />
+            働きやすい環境づくりに全力で取り組んでいます。
+          </div>
+        </div>
+        <ul class="p-top-culture__items">
+          <li class="p-top-culture__item">
+            <a href="#">
+              <img src="./images/culture_2.jpg" alt="" />
+              <h3 class="p-top-culture__sub-title">研修制度</h3>
+              <div class="p-top-culture__btn c-btn-detail">
+                <span
+                  class="c-btn-detail__arrow c-btn-detail__arrow--white"
+                ></span>
+                <span class="c-btn-detail__text c-btn-detail__text--white"
+                  >詳しく見る</span
+                >
+              </div>
+            </a>
+          </li>
+          <li class="p-top-culture__item">
+            <a href="#">
+              <img src="./images/culture_3.jpg" alt="" />
+              <h3 class="p-top-culture__sub-title">福利厚生</h3>
+              <div class="p-top-culture__btn c-btn-detail">
+                <span
+                  class="c-btn-detail__arrow c-btn-detail__arrow--white"
+                ></span>
+                <span class="c-btn-detail__text c-btn-detail__text--white"
+                  >詳しく見る</span
+                >
+              </div>
+            </a>
+          </li>
+          <li class="p-top-culture__item">
+            <a href="#">
+              <img src="./images/culture_1.jpg" alt="" />
+              <h3 class="p-top-culture__sub-title">オフィス環境</h3>
+              <div class="p-top-culture__btn c-btn-detail">
+                <span
+                  class="c-btn-detail__arrow c-btn-detail__arrow--white"
+                ></span>
+                <span class="c-btn-detail__text c-btn-detail__text--white"
+                  >詳しく見る</span
+                >
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="p-top-recruit l-top-recruit">
+        <div class="p-top-recruit__inner l-inner">
+          <div class="p-top-recruit__title">
+            <div class="c-section-en-title c-section-en-title--white">
+              recruit
+            </div>
+            <h2 class="c-section-title c-section-title--white">採用情報</h2>
+          </div>
+          <div class="p-top-recruit__items">
+            <a href="#" class="c-btn">
+              募集要項
+              <span></span>
+            </a>
+            <a href="page-qa.html" class="c-btn">
+              よくある質問
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="p-top-entry">
+        <div class="p-top-entry__inner l-inner">
+          <div class="p-top-entry__btn">
+            <a href="#">
+              <div class="p-top-entry__btn-wrapper">
+                <span class="p-top-entry__btn-title">entry</span>
+                <span class="p-top-entry__btn-text">エントリーはこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="p-footer l-footer">
+      <div class="p-footer__inner l-inner">
+        <div class="p-footer__left">
+          <div class="p-footer__logo">
+            <img src="./images/logo.svg" alt="cocomate">
+          </div>
+          <div class="p-footer__contract">
+            <a href="#">企業サイト</a>
+            <a href="#">プライバシーポリシー</a>
+          </div>
+        </div>
+        <div class="p-footer__right">
+          <nav class="p-footer__nav">
+            <ul class="p-footer__items">
+              <li class="p-footer__item">
+                <a href="#">会社を知る</a>
+              </li>
+              <li class="p-footer__item">
+                <a href="#">事業を知る</a>
+              </li>
+              <li class="p-footer__item">
+                <a href="#">人を知る</a>
+              </li>
+              <li class="p-footer__item">
+                <a href="#">働く環境</a>
+              </li>
+              <li class="p-footer__item">
+                <a href="#">採用情報</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="p-footer__copyright">
+            <small>&copy; 2023 cocomate Inc.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- ------------------------
     コンポーネント
@@ -60,7 +329,7 @@
         <span class="c-people-card__category">海外事業　サービス開発部</span>
         <span class="c-people-card__label">INTERVIEW #02</span>
         <p class="c-people-card__text">
-          アンテナを広く張りながら、<br>
+          アンテナを広く張りながら、<br />
           やりたいことに挑戦できる。
         </p>
       </a>
