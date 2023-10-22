@@ -24,6 +24,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- JavaScript -->
@@ -46,29 +51,19 @@
         <nav class="p-header__nav u-desktop">
           <ul class="p-header__items">
             <li class="p-header__item">
-              <a href="#" class="p-header__link">
-                会社を知る
-              </a>
+              <a href="#" class="p-header__link"> 会社を知る </a>
             </li>
             <li class="p-header__item">
-              <a href="#" class="p-header__link">
-                事業を知る
-              </a>
+              <a href="#" class="p-header__link"> 事業を知る </a>
             </li>
             <li class="p-header__item">
-              <a href="#" class="p-header__link">
-                人を知る
-              </a>
+              <a href="#" class="p-header__link"> 人を知る </a>
             </li>
             <li class="p-header__item">
-              <a href="#" class="p-header__link">
-                働く環境
-              </a>
+              <a href="#" class="p-header__link"> 働く環境 </a>
             </li>
             <li class="p-header__item">
-              <a href="#" class="p-header__link">
-                採用情報
-              </a>
+              <a href="#" class="p-header__link"> 採用情報 </a>
             </li>
           </ul>
         </nav>
@@ -101,7 +96,6 @@
       </nav>
     </div>
 
-
     <main>
       <div class="p-fv l-fv">
         <div class="p-fv__img">
@@ -116,62 +110,185 @@
       </div>
 
       <div class="p-top-message l-top-message">
-        <div class="p-top-message__bg-text">
-          MAKE <br />
-          DREAMS <br />
-          COME <br />
-          TRUE
-        </div>
-        <div class="l-inner">
-          <div class="p-top-message__content">
-            <div class="p-top-message__title">
-              できない理由を探すなら<br />
-              できる方法を探す自分でいたい
+        <div class="p-top-message__inner l-inner">
+          <div class="p-top-message__contents">
+            <div class="p-top-message__bg-text">
+              MAKE<br />
+              DREAMS<br />
+              COME<br />
+              TRUE
             </div>
-            <p class="p-top-message__text">
-              やらない自分と挑戦する自分あなたはどっちが好き？<br />
-              やりたいことがあるなら、自分から手を挙げて<br />
-              新しいことに挑戦しよう。仲間と語ろう。<br />
-              COCOMATEには、お互いの好きなことや 得意なことを持ち寄って、<br />
-              年齢や職種の垣根を越えてつながれる仲間がいる。<br />
-              これからたくさんの出会いを通じて ひとつずつ夢をかなえていこう。
-            </p>
-          </div>
-          <div class="p-top-message__img">
-            <img src="./images/top-message.jpg" alt="会議中の風景" />
+            <div class="p-top-message__body">
+              <div class="p-top-message__title">
+                できない理由を探すなら <br />
+                できる方法を探す自分でいたい
+              </div>
+              <div class="p-top-message__text">
+                やらない自分と挑戦する自分あなたはどっちが好き？<br />
+                やりたいことがあるなら、自分から手を挙げて<br />
+                新しいことに挑戦しよう。仲間と語ろう。<br />
+                COCOMATEには、お互いの好きなことや <br />
+                得意なことを持ち寄って、<br />
+                年齢や職種の垣根を越えてつながれる仲間がいる。<br />
+                これからたくさんの出会いを通じて <br />
+                ひとつずつ夢をかなえていこう。
+              </div>
+            </div>
+            <div class="p-top-message__img">
+              <img src="./images/top-message.jpg" alt="会議中" />
+            </div>
           </div>
         </div>
       </div>
 
-      <section class="p-top-company l-top-company">
-        <div class="l-inner">
-          <div class="p-top-company__img">
-            <img src="./images/company.jpg" alt="仕事現場" />
-          </div>
+      <div class="p-bg">
+        <section class="p-top-company l-top-company">
+          <div class="p-top-company__en-title c-section-en-title">company</div>
           <div class="p-top-company__img-bg">
             <img src="./images/company.jpg" alt="" />
           </div>
-          <div class="p-top-company__body">
-            <div class="p-top-company__title">
-              <h2 class="c-section-title">会社を知る</h2>
-            </div>
-            <p class="p-top-company__text">
-              世界中の人々の夢を<br />
-              WEBの技術力と人の力で実現するCOCOMATE。<br />
-              私たちのことをまずはお伝えします。
-            </p>
-            <div class="p-top-company__btn">
-              <a href="#" class="c-btn-detail">
-                <span class="c-btn-detail__arrow"></span>
-                <span class="c-btn-detail__text">詳しく見る</span>
-              </a>
-            </div>
-            <div class="p-top-company__en-title c-section-en-title">
-              company
+          <div class="p-top-company__contents">
+            <div class="l-inner">
+              <div class="p-top-company__content">
+                <div class="p-top-company__img">
+                  <img src="./images/company.jpg" alt="仕事現場" />
+                </div>
+                <div class="p-top-company__body">
+                  <div class="p-top-company__title">
+                    <h2 class="c-section-title">会社を知る</h2>
+                  </div>
+                  <p class="p-top-company__text">
+                    世界中の人々の夢を<br />
+                    WEBの技術力と人の力で実現するCOCOMATE。<br />
+                    私たちのことをまずはお伝えします。
+                  </p>
+                  <div class="p-top-company__btn">
+                    <a href="#" class="c-btn-detail">
+                      <span class="c-btn-detail__arrow"></span>
+                      <span class="c-btn-detail__text">詳しく見る</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="p-top-business l-top-business">
+          <div class="p-top-business__en-title c-section-en-title">
+            business
+          </div>
+          <div class="p-top-business__img-bg">
+            <img src="./images/business.jpg" alt="" />
+          </div>
+          <div class="p-top-business__contents">
+            <div class="l-inner">
+              <div class="p-top-business__content">
+                <div class="p-top-business__img">
+                  <img src="./images/business.jpg" alt="仕事現場" />
+                </div>
+                <div class="p-top-business__body">
+                  <div class="p-top-business__title">
+                    <h2 class="c-section-title">会社を知る</h2>
+                  </div>
+                  <p class="p-top-business__text">
+                    世界中の人々の夢を<br />
+                    WEBの技術力と人の力で実現するCOCOMATE。<br />
+                    私たちのことをまずはお伝えします。
+                  </p>
+                  <div class="p-top-business__btn">
+                    <a href="#" class="c-btn-detail">
+                      <span class="c-btn-detail__arrow"></span>
+                      <span class="c-btn-detail__text">詳しく見る</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="p-top-people l-top-people">
+          <div class="p-top-people__inner l-inner">
+            <div class="p-top-people__title">
+              <div class="c-section-en-title">people</div>
+              <h2 class="c-section-title">人を知る</h2>
+            </div>
+            <div class="p-top-people__text">
+              私たちは、ともに働く仲間と本気で向き合うことを大切にしています。<br />
+              COCOMATEで働く仲間を紹介します。
+            </div>
+            <div class="p-top-people__swiper-box">
+              <div class="p-top-people__swiper-around swiper-button-box">
+                <div class="swiper-button-prev p-top-people__prev"></div>
+                <div class="swiper-button-next p-top-people__next"></div>
+              </div>
+              <!-- /swiper-button-box -->
+              <div
+                class="swiper p-top-people__swiper js-people-slider"
+                id="slide1"
+              >
+                <!-- [必須] Swiper ラッパー -->
+                <div class="swiper-wrapper p-top-people__swiper-wrapper">
+                  <!-- [必須] スライド -->
+                  <div class="swiper-slide">
+                    <a href="#" class="c-people-card">
+                      <div class="c-people-card__img">
+                        <img src="./images/people_1.jpg" alt="" />
+                      </div>
+                      <div class="c-people-card__inner">
+                        <span class="c-people-card__category"
+                          >マーケティング事業部</span
+                        >
+                        <span class="c-people-card__label">INTERVIEW #01</span>
+                        <p class="c-people-card__text">
+                          一つの仕事を<br />
+                          最後までやり抜く信念で。
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="c-people-card">
+                      <div class="c-people-card__img">
+                        <img src="./images/people_2.jpg" alt="" />
+                      </div>
+                      <div class="c-people-card__inner">
+                        <span class="c-people-card__category"
+                          >海外事業　サービス開発部</span
+                        >
+                        <span class="c-people-card__label">INTERVIEW #02</span>
+                        <p class="c-people-card__text">
+                          アンテナを広く張りながら、<br />
+                          やりたいことに挑戦できる。
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="c-people-card__img">
+                      <img src="./images/people_3.jpg" alt="" />
+                    </div>
+                    <a href="#" class="c-people-card">
+                      <div class="c-people-card__inner">
+                        <span class="c-people-card__category"
+                          >ヘルスケア事業　営業部</span
+                        >
+                        <span class="c-people-card__label">INTERVIEW #03</span>
+                        <p class="c-people-card__text">
+                          お客さんの喜ぶ表情が<br />
+                          何よりのやりがいに。
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- /campaign__swiper-box -->
+            </div>
+          </div>
+        </section>
+      </div>
 
       <section class="p-top-culture l-top-culture">
         <div class="l-inner p-top-culture__inner">
@@ -264,11 +381,11 @@
       </div>
     </main>
 
-    <footer class="p-footer l-footer">
+    <footer class="p-footer">
       <div class="p-footer__inner l-inner">
         <div class="p-footer__left">
           <div class="p-footer__logo">
-            <img src="./images/logo.svg" alt="cocomate">
+            <img src="./images/logo.svg" alt="cocomate" />
           </div>
           <div class="p-footer__contract">
             <a href="#">企業サイト</a>
@@ -302,37 +419,7 @@
       </div>
     </footer>
 
-    <!-- ------------------------
-    コンポーネント
-    ------------------------ -->
-    <div class="l-inner">
-      <!-- セクションタイトル -->
-      <h2 class="c-section-title">会社を知る</h2>
-
-      <!-- 英語のセクションタイトル -->
-      <div class="c-section-en-title">company</div>
-
-      <!-- 共通ボタン -->
-      <a href="#" class="c-btn">
-        募集要項
-        <span></span>
-      </a>
-
-      <!-- 詳しく見るボタン -->
-      <a href="#" class="c-btn-detail">
-        <span class="c-btn-detail__arrow"></span>
-        <span class="c-btn-detail__text">詳しく見る</span>
-      </a>
-
-      <!-- peopleカード -->
-      <a href="#" class="c-people-card">
-        <span class="c-people-card__category">海外事業　サービス開発部</span>
-        <span class="c-people-card__label">INTERVIEW #02</span>
-        <p class="c-people-card__text">
-          アンテナを広く張りながら、<br />
-          やりたいことに挑戦できる。
-        </p>
-      </a>
-    </div>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

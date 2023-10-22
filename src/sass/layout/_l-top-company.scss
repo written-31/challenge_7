@@ -1,8 +1,8 @@
 @use 'global' as *;
 .l-top-company {
-  margin-top: myrem(60);
+  margin-top: myrem(0);
 
   @include mq('md') {
-    margin-top: myrem(200);
+    margin-top: myrem(0);
   }
 }

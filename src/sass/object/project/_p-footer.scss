@@ -1,5 +1,15 @@
 @use 'global' as *;
 
+.p-footer {
+  padding-top: myrem(40);
+  padding-bottom: myrem(40);
+
+  @include mq('md') {
+    padding-top: myrem(80);
+    padding-bottom: myrem(80);
+  }
+}
+
 .p-footer__inner {
   display: flex;
   flex-direction: column;
@@ -70,6 +80,5 @@
   }
 }
 
-* {
-  border: 1px solid red;
-}
+
+

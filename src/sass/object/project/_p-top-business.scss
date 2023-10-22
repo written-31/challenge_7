@@ -1,50 +1,53 @@
 @use 'global' as *;
-.p-top-company__en-title {
-  // position: relative;
+.p-top-business__en-title {
   position: absolute;
   z-index: 2;
   top: -21%;
-
   @include mq('md') {
-    transform-origin: 100% 100%;
-    transform: rotate(270deg);
-    top: -40%;
-    right: 0;
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    // top: -40%;
+    left: myrem(150);
   }
 }
 
-.p-top-company {
+.p-top-business {
   position: relative;
-  margin-bottom: myrem(200);
+  margin-bottom: myrem(312);
+  // display: flex;
+  // flex-direction: row-reverse;
   @include mq('md') { 
     margin-bottom: myrem(300);
   }
 }
 
-.p-top-company {  
+.p-top-business {  
 }
 
 // 背景画像
-.p-top-company__img-bg {
+.p-top-business__img-bg {
   position: relative;
   top: myrem(100);
   z-index: -1;
 
   @include mq('md') {
     top: myrem(95);
+    right: 0;
+    margin-left: auto;
     aspect-ratio: 1080/620;
     max-height: myrem(620);
     width: 75%;
   }
 }
 
-.p-top-company__img-bg img {
+.p-top-business__img-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.p-top-company__img-bg::after {
+.p-top-business__img-bg::after {
   position: absolute;
   content: "";
   top: 0;
@@ -54,77 +57,72 @@
   background-color: rgba($color: #000000, $alpha: 0.6);
 }
 
-.p-top-company__contents {
+.p-top-business__contents {
   height: 100%;
 }
 
 // flex部分
-.p-top-company__content {
+.p-top-business__content {
   position: absolute;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   
   @include mq('md') {
     width: calc((1160 / 1440) * 100%);
-    left: myrem(80);
+    right: myrem(80);
   }
 }
 
 // 重なった画像
-.p-top-company__img {
-  margin-right: myrem(20);
+.p-top-business__img {
+  margin-left: myrem(20);
   width: 95%;
   box-shadow: 0 myrem(4) myrem(16) 0 rgba($color: #000000, $alpha: 0.08);
-
 
   
     @include mq('md') {
       aspect-ratio: 670/450;
+      margin-left: auto;
       width: 100%;
       max-width: calc((670 / 1160) * 100%);
-      // position: absolute;
-      // top: 0;
-      // left: myrem(80);
   }
 }
 
-.p-top-company__img img {
+.p-top-business__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 // テキスト部分
-.p-top-company__body {
+.p-top-business__body {
   width: 95%;
-  display: block;
   background-color: $white;
   padding: myrem(32) myrem(40);
   margin-top: myrem(-50);
   position: relative;
   z-index: 1;
-  margin-left: auto;
+  margin-right: auto;
   box-shadow: 0 myrem(4) myrem(16) 0 rgba($color: #000000, $alpha: 0.08);
 
-  
   @include mq('md') {
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: myrem(-170);
     width: calc((600 / 1160) * 100%);
     padding: myrem(64) myrem(80);
-    margin-left: initial;
+    margin-right: initial;
   }
 }
 
-.p-top-company__title {
+.p-top-business__title {
 
 }
 
 
-.p-top-company__text {
+.p-top-business__text {
   font-size: myrem(16);
   font-weight: $regular;
   line-height: 1.9;
@@ -135,7 +133,7 @@
   }
 }
 
-.p-top-company__btn {
+.p-top-business__btn {
   margin-top: myrem(16);
 
   @include mq('md') {

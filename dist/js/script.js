@@ -52,19 +52,6 @@ jQuery(function ($) {
 
 
     //ハンバーガーメニュー
-    // $(".js-hamburger").on("click", function () {
-    //   $(this).toggleClass("open");
-    //   if ($(this).hasClass("open")) {
-    //     $(".js-nav").fadeIn();
-    //     $(".p-header").addClass("transparent");
-    //     $("body").css("overflow", "hidden"); // スクロール無効化
-    //   } else {
-    //     $(".js-nav").fadeOut();
-    //     $(".p-header").removeClass("transparent");
-    //     $("body").css("overflow", "auto"); // スクロール有効化
-    //   }
-    // });
-
     $(".js-hamburger").on("click", function () {
       $(this).toggleClass("open");
       if ($(this).hasClass("open")) {
@@ -79,8 +66,41 @@ jQuery(function ($) {
         $("body").css("overflow", "auto"); // スクロール有効化
       }
     });
-    
 
+    // swiper
+    const swiper1 = new Swiper(".js-people-slider", {
+      loop: true,
+      // autoplay: {
+      //   delay: 4000,
+      //   disableOnInteraction: false,
+      // },
+  
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1.25,
+          spaceBetween: 20,
+        },
+        425: {
+          slidesPerView: 1.7,
+          spaceBetween: 20,
+        },
+        // when window width is >= 640px
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 24,
+        },
+        1440: {
+          slidesPerView: 2.5,
+          spaceBetween: 64,
+        },
+      },
+    });
 });
 
 
