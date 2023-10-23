@@ -7,7 +7,7 @@
     position: absolute;
     transform-origin: 0 0;
     transform: rotate(90deg);
-    // top: -40%;
+    top: 0%;
     left: myrem(150);
   }
 }
@@ -54,7 +54,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($color: #000000, $alpha: 0.6);
+  background-color: rgba($color: #000000, $alpha: 0.7);
 }
 
 .p-top-business__contents {
@@ -110,7 +110,7 @@
   @include mq('md') {
     position: absolute;
     left: 0;
-    bottom: myrem(-170);
+    bottom: myrem(-158);
     width: calc((600 / 1160) * 100%);
     padding: myrem(64) myrem(80);
     margin-right: initial;

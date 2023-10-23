@@ -52,7 +52,6 @@
 .c-people-card__category {
   font-weight: $regular;
   font-size: min(1.111vw, 16px);
-  letter-spacing: .04em;
   line-height: calc(18/16);
   padding: myrem(16) myrem(8);
   background-color: $white;
@@ -67,18 +66,20 @@
 .c-people-card__category {
   top: 0;
   left: myrem(20);
+  letter-spacing: .14em;
 
   @include mq('md') {
-    left: myrem(48);
+    left: myrem(46);
   }
 }
 
 .c-people-card__label {
   top: 0;
   left: myrem(50);
+  letter-spacing: .04em;
 
   @include mq('md') {
-    left: myrem(88);
+    left: myrem(86);
   }
 }
 
@@ -90,10 +91,11 @@
   font-size: min(2.607vw, #{myrem(20)});
   position: relative;
   z-index: 1;
+  white-space: nowrap;
   
   @include mq('md') {
-    font-size: min(1.805vw, #{myrem(26)}); //カンプ確認
-    // font-size: myrem(20);
+    font-size: min(2.222vw, #{myrem(32)}); //カンプ確認
+    // font-size: myrem(32);
   }
 }
 

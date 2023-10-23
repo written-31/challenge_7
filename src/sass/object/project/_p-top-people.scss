@@ -1,11 +1,22 @@
 @use 'global' as *;
 .p-top-people {
-
+  overflow: hidden;
 }
 
-.p-top-people__inner {
+.l-inner.p-top-people__inner  {
+  @include mq('md') {
+    padding-right: 0;
+    padding-left: myrem(80);
+    max-width: initial;
+  }
 
+  // @include mq('xl') {
+  //   max-width: $innerWidth + $padding-pc * 2;
+  //   padding-right: myrem(strip-unit($padding-pc));
+  //   padding-left: myrem(strip-unit($padding-pc));
+  // }
 }
+
 
 .p-top-people__title {
   position: relative;
@@ -23,7 +34,8 @@
 
     @include mq('md') {
     bottom: myrem(-160);
-    right: 0;
+    left: initial;
+    right: min(myrem(-310), 50%);
   }
 }
 
@@ -36,6 +48,7 @@
   
   @include mq('md') {
     text-align: left;
+    margin-top: myrem(28);
   }
 }
 
@@ -61,7 +74,7 @@
     gap: myrem(24);
     position: absolute;
     top: myrem(-124);
-    right: 0;
+    right: 6%;
   }
 }
 

@@ -24,11 +24,11 @@
 .p-top-recruit__title .c-section-en-title {
   position: absolute;
   bottom: myrem(-5);
-  left: 50%;
+  left: 49%;
   transform: translateX(-50%);
   
   @include mq('md') {
-    bottom: myrem(-10);
+    bottom: myrem(-16);
   }
 }
 

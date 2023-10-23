@@ -7,6 +7,8 @@
   text-transform: uppercase;
   opacity: 0.03;
 
+  // background-color: red;
+
   @include mq('md') {
     font-size: myrem(160);
   }
