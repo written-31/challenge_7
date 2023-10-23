@@ -36,27 +36,34 @@
 
 // ホバー時
 .c-btn-detail:hover {
-  opacity: 1;
-  transition: .3s;
+  @include mq('md') {  
+    opacity: 1;
+    transition: .3s;
+  }
 }
 
 .c-btn-detail:hover .c-btn-detail__arrow {
-  background-color: $white;
-  transition: .3s;
+  @include mq('md') {  
+    background-color: $white;
+    transition: .3s;
+  }
 }
 
 .c-btn-detail:hover .c-btn-detail__arrow::after {
-  background-image: none;
-
-	-webkit-mask-image: url(../images/btn-detail.svg);
-	-webkit-mask-size: contain;
-	-webkit-mask-repeat: no-repeat;
-
-	mask-image: url(../images/btn-detail.svg);
-	mask-size: contain;
-	mask-repeat: no-repeat;
-
-  background-color: $black;
+  @include mq('md') {
+    
+    background-image: none;
+    
+    -webkit-mask-image: url(../images/btn-detail.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    
+    mask-image: url(../images/btn-detail.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    
+    background-color: $black;
+  }
 }
 
 // 白色版
@@ -66,10 +73,14 @@
 }
 
 .c-btn-detail:hover .c-btn-detail__arrow--white {
-  background-color: transparent;
+  @include mq('md') { 
+    background-color: transparent;
+  }
 }
 .c-btn-detail:hover .c-btn-detail__arrow--white::after {
-  background-color: $white;
+  @include mq('md') { 
+    background-color: $white;
+  }
 }
 
 .c-btn-detail__text--white {

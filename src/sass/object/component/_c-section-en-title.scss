@@ -3,8 +3,11 @@
   font-size: myrem(60);
   font-family: $font-en;
   font-weight: $bold;
+  line-height: 1;
   text-transform: uppercase;
   opacity: 0.03;
+
+  // background-color: red;
 
   @include mq('md') {
     font-size: myrem(160);

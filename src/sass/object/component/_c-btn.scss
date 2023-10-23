@@ -9,6 +9,10 @@
   background-color: $white;
   transition: .3s;
   position: relative;
+
+  @include mq('md') {
+    padding: myrem(20) myrem(50);
+  }
 }
 
 .c-btn span {

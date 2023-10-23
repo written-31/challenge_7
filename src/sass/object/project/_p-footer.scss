@@ -1,13 +1,23 @@
 @use 'global' as *;
 
+.p-footer {
+  padding-top: myrem(40);
+  padding-bottom: myrem(40);
+
+  @include mq('md') {
+    padding-top: myrem(70);
+    padding-bottom: myrem(70);
+  }
+}
+
 .p-footer__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   
   @include mq('md') {
-    padding-left: myrem(140);
-    padding-right: myrem(140);
+    padding-left: myrem(47);
+    padding-right: myrem(47);
     flex-direction: row;
     justify-content: space-between;
     align-items: initial;
@@ -65,11 +75,10 @@
   margin-top: myrem(20);
 
   @include mq('md') {
-    margin-top: myrem(67);
+    margin-top: myrem(62);
     text-align: right;
   }
 }
 
-* {
-  border: 1px solid red;
-}
+
+

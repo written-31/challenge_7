@@ -1,61 +1,63 @@
-@use "global" as *;
+@use 'global' as *;
 
 .p-top-message {
   position: relative;
   padding-top: myrem(56);
   padding-bottom: myrem(56);
-  margin-bottom: myrem(180);
-  background: linear-gradient(150deg, rgba(#000,1) 50%, rgba(#580F14,1) 100%);
-  width: calc((351 / 375) * 100%);
-
-  
+  margin-bottom: myrem(160);
   @include mq('md') {
-    padding-top: myrem(506);
+    margin-bottom: myrem(103);
     margin-top: myrem(-330);
-    padding-bottom: myrem(160);
-    margin-bottom: myrem(80);
+    padding-top: myrem(330);
+    padding-bottom: myrem(80);
+    min-height: myrem(1426);
+  }
+}
+
+.p-top-message::before {
+  position: absolute;
+  background: linear-gradient(150deg, rgba(#000,1) 50%, rgba(#580F14,1) 100%);
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: calc((351 / 375) * 100%);
+  content: "";
+  @include mq('md') {
     width: calc((1360 / 1440) * 100%);
   }
 }
 
+.p-top-message__contents {
+  // position: relative;
 
-// .p-top-message::before {
-//   position: absolute;
-//   z-index: -1;
-//   content: "";
-//   width: calc((351 / 375) * 100%);
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   margin-right: auto;
-//   background: linear-gradient(150deg, rgba(#000,1) 50%, rgba(#580F14,1) 100%);
-  
-  
-//   @include mq('md') {
-//     width: calc((1360 / 1440) * 100%);
-//     top: myrem(-386);
-//   }
-// }
+  @include mq('md') {
+  }
+}
 
 .p-top-message__bg-text {
   font-size: myrem(70);
   letter-spacing: .08em;
   font-weight: $ex-bold;
   font-family: $font-en;
-  color: rgba($color: $white, $alpha: 0.12);
+  color: rgba($color: $white, $alpha: 0.1);
   line-height: 1;
   position: absolute;
-  // top: myrem(12);
-
+  transform: translateY(myrem(-44));
   @include mq('md') {
     font-size: myrem(240);
-    top: myrem(386);
-    width: calc((1125 / 1440) * 100%);
-    margin-left: myrem(80);
+    transform: translate(myrem(-120), myrem(-120));
   }
 }
 
-.p-top-message__content {
+.p-top-message__body {
+  padding-right: myrem(23);
+
+  @include mq('md') {
+    padding-right: initial;
+    margin-top: myrem(176);
+  }
+
 }
 
 .p-top-message__title {
@@ -67,6 +69,7 @@
   @include mq('md') {
     font-size: myrem(48);
   }
+
 }
 
 .p-top-message__text {
@@ -75,26 +78,30 @@
   line-height: 2;
   font-weight: $regular;
   margin-top: myrem(24);
-  width: calc((316 / 351) * 100%);
   
   @include mq('md') {
     font-size: myrem(22);
     line-height: 2.6;
-    width: calc((528 / 1125) * 100%);
+    margin-top: myrem(56);
 
   }
 }
 
 .p-top-message__img {
-  width: calc((323 / 375) * 100%);
   aspect-ratio: 323/182;
-  position: absolute;
+  width: calc((323 / 375) * 100%);
+  // width: 86.133vw;
+  bottom: 0;
   right: 0;
-  bottom: myrem(-216);
-  
+  position: absolute;
+  transform: translateY(myrem(160));
+  z-index: -1;
+
   @include mq('md') {
+    aspect-ratio: 682/384;
     width: calc((682 / 1440) * 100%);
-    bottom: myrem(-80);
+    transform: translateY(myrem(103));
+    // bottom: myrem(-103);
   }
 }
 
@@ -102,16 +109,5 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
-  display: inline-block;
 }
 
-.p-top-message__img img::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: $black;
-  opacity: 0.3;
-  z-index: 1;
-}
