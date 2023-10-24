@@ -1,5 +1,7 @@
 @use 'global' as *;
 .p-sidebar {
+  position: relative;
+  top: myrem(14);
 
 }
 
@@ -12,19 +14,8 @@
   margin-top: myrem(16);
 
   @include mq('md') {
-    margin-top: myrem(32);
+    margin-top: myrem(27);
   }
 }
 
-.c-btn-about {
-
-}
-
-.c-btn-about__arrow {
-
-}
-
-.c-btn-about__text {
-
-}
 

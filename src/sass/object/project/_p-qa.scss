@@ -24,6 +24,7 @@
 .p-qa__sidebar {
   grid-area: sidebar;
 
+
 }
 
 .p-qa__contents {
@@ -38,7 +39,7 @@
   margin-top: myrem(40);
 
   @include mq('md') {
-    margin-top: myrem(80);
+    margin-top: myrem(82);
   }
 }
 
@@ -102,6 +103,7 @@
   height: 30px;
   background: url(../images/qa_q.svg) center center no-repeat;
   margin-right: myrem(24);
+  padding-right: myrem(31);
 }
 
 .p-qa__a {
@@ -118,13 +120,12 @@
 .p-qa__a::before {
   content: "";
   display: inline-block;
-  width: 40px;
+  width: 27px;
   height: 30px;
-  background: url(../images/qa_a.svg) center center no-repeat;
+  background-image: url(../images/qa_a.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-right: myrem(27);
   margin-right: myrem(24);
-
-  @include mq('md') {
-    width: 27px;
-  }
 }
 

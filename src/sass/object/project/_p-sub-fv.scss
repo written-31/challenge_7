@@ -1,7 +1,7 @@
 @use 'global' as *;
 .p-sub-fv {
-  padding-top: myrem(40);
-  padding-bottom: myrem(40);
+  padding-top: myrem(60);
+  padding-bottom: myrem(60);
   background: linear-gradient(150deg, rgba(#000,1) 0%, rgba(#580F14,1) 100%);
   
   @include mq('md') {
