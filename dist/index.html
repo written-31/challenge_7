@@ -36,7 +36,7 @@
     <script defer src="./js/script.js"></script>
   </head>
   <body>
-    <header class="p-header">
+    <header class="p-header slideIn">
       <div class="p-header__inner">
         <h1 class="p-header__logo">
           <a href="/">
@@ -98,8 +98,8 @@
 
     <main>
       <div class="p-fv l-fv">
-        <div class="p-fv__img">
-          <picture>
+        <div>
+          <picture class="p-fv__img slideIn u-transparent" >
             <!-- ↓幅800px以上で表示↓ -->
             <source srcset="./images/fv.jpg" media="(min-width: 768px)" />
             <!-- ↓上記全て表示条件に当てはまらない場合に表示↓ -->
@@ -120,18 +120,18 @@
             </div>
             <div class="p-top-message__body">
               <div class="p-top-message__title">
-                できない理由を探すなら <br />
-                できる方法を探す自分でいたい
+                <span class="fadein text01">できない理由を探すなら </span><br />
+                <span class="fadein text02">できる方法を探す自分でいたい</span>
               </div>
               <div class="p-top-message__text">
-                やらない自分と挑戦する自分あなたはどっちが好き？<br />
-                やりたいことがあるなら、自分から手を挙げて<br />
-                新しいことに挑戦しよう。仲間と語ろう。<br />
-                COCOMATEには、お互いの好きなことや <br />
-                得意なことを持ち寄って、<br />
-                年齢や職種の垣根を越えてつながれる仲間がいる。<br />
-                これからたくさんの出会いを通じて <br />
-                ひとつずつ夢をかなえていこう。
+                <span class="fadein text03">やらない自分と挑戦する自分あなたはどっちが好き？</span><br />
+                <span class="fadein text04">やりたいことがあるなら、自分から手を挙げて</span><br />
+                <span class="fadein text05">新しいことに挑戦しよう。仲間と語ろう。</span><br />
+                <span class="fadein text06">COCOMATEには、お互いの好きなことや </span><br />
+                <span class="fadein text07">得意なことを持ち寄って、</span><br />
+                <span class="fadein text08">年齢や職種の垣根を越えてつながれる仲間がいる。</span><br />
+                <span class="fadein text09">これからたくさんの出会いを通じて </span><br />
+                <span class="fadein text10">ひとつずつ夢をかなえていこう。</span>
               </div>
             </div>
             <div class="p-top-message__img">
@@ -151,7 +151,7 @@
           </div>
           <div class="p-top-company__contents">
             <div class="l-inner">
-              <div class="p-top-company__content">
+              <div class="p-top-company__content js-fadeUpTrigger">
                 <div class="p-top-company__img">
                   <img src="./images/company.jpg" alt="仕事現場" />
                 </div>
@@ -183,9 +183,9 @@
           <div class="p-top-business__img-bg">
             <img src="./images/business_bg.jpg" alt="" />
           </div>
-          <div class="p-top-business__contents">
+          <div class="p-top-business__contents ">
             <div class="l-inner">
-              <div class="p-top-business__content">
+              <div class="p-top-business__content js-fadeUpTrigger">
                 <div class="p-top-business__img">
                   <img src="./images/business.jpg" alt="仕事現場" />
                 </div>
@@ -211,7 +211,7 @@
         </section>
 
         <section class="p-top-people l-top-people">
-          <div class="p-top-people__inner l-inner">
+          <div class="p-top-people__inner l-inner js-fadeUpTrigger">
             <div class="p-top-people__title">
               <div class="c-section-en-title">people</div>
               <h2 class="c-section-title">人を知る</h2>
@@ -293,7 +293,7 @@
       </div>
 
       <section class="p-top-culture l-top-culture">
-        <div class="l-inner p-top-culture__inner">
+        <div class="l-inner p-top-culture__inner js-fadeUpTrigger">
           <div class="p-top-culture__title">
             <div class="c-section-en-title">culture</div>
             <h2 class="c-section-title">働く環境</h2>
@@ -303,7 +303,7 @@
             働きやすい環境づくりに全力で取り組んでいます。
           </div>
         </div>
-        <ul class="p-top-culture__items">
+        <ul class="p-top-culture__items js-fadeUpTrigger">
           <li class="p-top-culture__item">
             <a href="#">
               <img src="./images/culture_1.jpg" alt="" />
@@ -350,7 +350,7 @@
       </section>
 
       <section class="p-top-recruit l-top-recruit">
-        <div class="p-top-recruit__inner l-inner">
+        <div class="p-top-recruit__inner l-inner js-fadeUpTrigger">
           <div class="p-top-recruit__title">
             <div class="c-section-en-title c-section-en-title--white">
               recruit
@@ -371,7 +371,7 @@
       </section>
       <div class="p-top-entry">
         <div class="p-top-entry__inner l-inner">
-          <div class="p-top-entry__btn">
+          <div class="p-top-entry__btn js-fadeUpTrigger">
             <a href="#">
               <div class="p-top-entry__btn-wrapper">
                 <span class="p-top-entry__btn-title">entry</span>
