@@ -35,6 +35,51 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap { 
+  width:100vw;
+  height:100vh;
+  background-color:#03085C;
+   
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content {      
+  width:auto;
+  height: auto;
+}
+p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 3em;
+}
+
+/*以下フェードイン表示の指定*/
+.fadein {
+  opacity: 0;
+  animation: fadein 2s ease forwards;
+}
+@keyframes fadein {
+  100% {  opacity: 1;}
+}
+
+/*以下遅延の指定*/
+.text01 {animation-delay: .5s;}
+.text02 {animation-delay: .7s;}
+.text03 {animation-delay: 1s;}
+.text04 {animation-delay: 1.2s;}
+.text05 {animation-delay: 1.4s;}
+.text06 {animation-delay: 1.6s;}
+.text07 {animation-delay: 1.8s;}
+.text08 {animation-delay: 2s;}
+.text09 {animation-delay: 2.2s;}
+.text10 {animation-delay: 2.4s;}
+
 .p-top-message__bg-text {
   font-size: myrem(70);
   letter-spacing: .08em;
