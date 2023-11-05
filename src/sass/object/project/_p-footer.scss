@@ -67,9 +67,42 @@
 }
 
 .p-footer__item {
+  position: relative;
   font-size: myrem(16);
   font-weight: $regular;
 }
+
+.p-footer__item::after {
+  @include mq('md') {
+    position: absolute;
+    bottom: myrem(-5);
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    height: 2px;
+    transform-origin: center top;
+    transition: .3s ease;
+    width: myrem(0);
+    background-color: $red;
+  }
+}
+
+.p-footer__item:hover::after {
+  @include mq('md') {
+    // width: calc(100% - #{myrem(20)});
+    width: 100%;
+  }
+}
+
+.p-footer__item:hover {
+  @include mq('md') {
+    opacity: 1;
+
+  }
+}
+
+
 
 .p-footer__copyright {
   margin-top: myrem(20);

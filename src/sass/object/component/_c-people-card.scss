@@ -4,9 +4,10 @@
   aspect-ratio: 520/620;
   width: 100%;
   position: relative;
-
 }
 .c-people-card__img {
+  overflow: hidden;
+  transition: .3s;
   aspect-ratio: 520/620;
   position: absolute;
   top: 0;
@@ -51,7 +52,8 @@
 .c-people-card__label,
 .c-people-card__category {
   font-weight: $regular;
-  font-size: min(1.111vw, 16px);
+  font-size: min(1.7vw, 16px);
+  // font-size: myrem(16);
   line-height: calc(18/16);
   padding: myrem(16) myrem(8);
   background-color: $white;
@@ -88,7 +90,9 @@
   color: $white;
   letter-spacing: .04em;
   font-weight: $bold;
-  font-size: min(2.607vw, #{myrem(20)});
+  line-height: 1.5;
+  font-size: min(4.1vw, #{myrem(20)});
+  // font-size: myrem(20);
   position: relative;
   z-index: 1;
   white-space: nowrap;
@@ -99,3 +103,41 @@
   }
 }
 
+
+
+.c-people-card:hover {
+  @include mq('md') {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+}
+
+.c-people-card:hover img {
+  @include mq('md') {
+    transform: scale(1.05);
+    transition: .3s;
+  }
+}
+
+.c-people-card::before {
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: .3s;
+  }
+}
+
+.c-people-card:hover::before {
+  @include mq('md') {
+    opacity: 1;
+  }
+}

@@ -15,8 +15,11 @@
     <meta property="og:image" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:description" content="" />
+    <!-- noindex,nofollow -->
+    <meta name="robots" content="noindex , nofollow" />
+
     <!-- ファビコン -->
-    <link rel="icon" href="" />
+    <!-- <link rel="icon" href="" /> -->
     <!-- googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +42,7 @@
     <header class="p-header slideIn">
       <div class="p-header__inner">
         <h1 class="p-header__logo">
-          <a href="/">
+          <a href="index.html">
             <img src="./images/logo.svg" alt="cocomate" />
           </a>
         </h1>
@@ -99,7 +102,7 @@
     <main>
       <div class="p-fv l-fv">
         <div>
-          <picture class="p-fv__img slideIn u-transparent" >
+          <picture class="p-fv__img slideIn u-transparent">
             <!-- ↓幅800px以上で表示↓ -->
             <source srcset="./images/fv.jpg" media="(min-width: 768px)" />
             <!-- ↓上記全て表示条件に当てはまらない場合に表示↓ -->
@@ -124,14 +127,29 @@
                 <span class="fadein text02">できる方法を探す自分でいたい</span>
               </div>
               <div class="p-top-message__text">
-                <span class="fadein text03">やらない自分と挑戦する自分あなたはどっちが好き？</span><br />
-                <span class="fadein text04">やりたいことがあるなら、自分から手を挙げて</span><br />
-                <span class="fadein text05">新しいことに挑戦しよう。仲間と語ろう。</span><br />
-                <span class="fadein text06">COCOMATEには、お互いの好きなことや </span><br />
-                <span class="fadein text07">得意なことを持ち寄って、</span><br />
-                <span class="fadein text08">年齢や職種の垣根を越えてつながれる仲間がいる。</span><br />
-                <span class="fadein text09">これからたくさんの出会いを通じて </span><br />
-                <span class="fadein text10">ひとつずつ夢をかなえていこう。</span>
+                <span class="fadein text03"
+                  >やらない自分と挑戦する自分あなたはどっちが好き？</span
+                ><br />
+                <span class="fadein text04"
+                  >やりたいことがあるなら、自分から手を挙げて</span
+                ><br />
+                <span class="fadein text05"
+                  >新しいことに挑戦しよう。仲間と語ろう。</span
+                ><br />
+                <span class="fadein text06"
+                  >COCOMATEには、お互いの好きなことや </span
+                ><br />
+                <span class="fadein text07">得意なことを持ち寄って、</span
+                ><br />
+                <span class="fadein text08"
+                  >年齢や職種の垣根を越えてつながれる仲間がいる。</span
+                ><br />
+                <span class="fadein text09"
+                  >これからたくさんの出会いを通じて </span
+                ><br />
+                <span class="fadein text10"
+                  >ひとつずつ夢をかなえていこう。</span
+                >
               </div>
             </div>
             <div class="p-top-message__img">
@@ -183,7 +201,7 @@
           <div class="p-top-business__img-bg">
             <img src="./images/business_bg.jpg" alt="" />
           </div>
-          <div class="p-top-business__contents ">
+          <div class="p-top-business__contents">
             <div class="l-inner">
               <div class="p-top-business__content js-fadeUpTrigger">
                 <div class="p-top-business__img">
@@ -194,8 +212,8 @@
                     <h2 class="c-section-title">事業を知る</h2>
                   </div>
                   <p class="p-top-business__text">
-                    私たちはWEBを基盤とした事業を展開しています。<br>
-                    お客さまの多様なニーズに対応する<br>
+                    私たちはWEBを基盤とした事業を展開しています。<br />
+                    お客さまの多様なニーズに対応する<br />
                     私たち独自の事業モデルを紹介します。
                   </p>
                   <div class="p-top-business__btn">
@@ -228,7 +246,6 @@
               <!-- /swiper-button-box -->
               <div
                 class="swiper p-top-people__swiper js-people-slider"
-                id="slide1"
               >
                 <!-- [必須] Swiper ラッパー -->
                 <div class="swiper-wrapper p-top-people__swiper-wrapper">
@@ -236,7 +253,7 @@
                   <div class="swiper-slide">
                     <a href="#" class="c-people-card">
                       <div class="c-people-card__img">
-                        <img src="./images/people_1.jpg" alt="" />
+                        <img src="./images/people_1.jpg" alt="Aさん" />
                       </div>
                       <div class="c-people-card__inner">
                         <span class="c-people-card__category"
@@ -253,7 +270,7 @@
                   <div class="swiper-slide">
                     <a href="#" class="c-people-card">
                       <div class="c-people-card__img">
-                        <img src="./images/people_2.jpg" alt="" />
+                        <img src="./images/people_2.jpg" alt="Bさん" />
                       </div>
                       <div class="c-people-card__inner">
                         <span class="c-people-card__category"
@@ -268,17 +285,17 @@
                     </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="c-people-card__img">
-                      <img src="./images/people_3.jpg" alt="" />
-                    </div>
                     <a href="#" class="c-people-card">
+                      <div class="c-people-card__img">
+                        <img src="./images/people_3.jpg" alt="Cさん" />
+                      </div>
                       <div class="c-people-card__inner">
                         <span class="c-people-card__category"
                           >ヘルスケア事業　営業部</span
                         >
                         <span class="c-people-card__label">INTERVIEW #03</span>
                         <p class="c-people-card__text">
-                          お客さんの喜ぶ表情が<br />
+                          お客さんの喜ぶ表情が<br>
                           何よりのやりがいに。
                         </p>
                       </div>
@@ -306,7 +323,7 @@
         <ul class="p-top-culture__items js-fadeUpTrigger">
           <li class="p-top-culture__item">
             <a href="#">
-              <img src="./images/culture_1.jpg" alt="" />
+              <img src="./images/culture_1.jpg" alt="オフィス環境" />
               <h3 class="p-top-culture__sub-title">オフィス環境</h3>
               <div class="p-top-culture__btn c-btn-detail">
                 <span
@@ -320,7 +337,7 @@
           </li>
           <li class="p-top-culture__item">
             <a href="#">
-              <img src="./images/culture_2.jpg" alt="" />
+              <img src="./images/culture_2.jpg" alt="研修制度" />
               <h3 class="p-top-culture__sub-title">研修制度</h3>
               <div class="p-top-culture__btn c-btn-detail">
                 <span
@@ -334,7 +351,7 @@
           </li>
           <li class="p-top-culture__item">
             <a href="#">
-              <img src="./images/culture_3.jpg" alt="" />
+              <img src="./images/culture_3.jpg" alt="福利厚生" />
               <h3 class="p-top-culture__sub-title">福利厚生</h3>
               <div class="p-top-culture__btn c-btn-detail">
                 <span
@@ -371,7 +388,7 @@
       </section>
       <div class="p-top-entry">
         <div class="p-top-entry__inner l-inner">
-          <div class="p-top-entry__btn js-fadeUpTrigger">
+          <div class="p-top-entry__btn">
             <a href="#">
               <div class="p-top-entry__btn-wrapper">
                 <span class="p-top-entry__btn-title">entry</span>

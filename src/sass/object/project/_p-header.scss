@@ -139,6 +139,34 @@
     padding-right: myrem(20);
   }
 }
+.p-header__link::after {
+  @include mq('md') {
+    position: absolute;
+    bottom: myrem(20);
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    height: 2px;
+    transform-origin: center top;
+    transition: .3s ease;
+    width: myrem(0);
+    background-color: $red;
+  }
+}
+
+.p-header__link:hover::after {
+  @include mq('md') {
+    width: calc(100% - #{myrem(40)});
+  }
+}
+
+.p-header__link:hover {
+  @include mq('md') {
+    opacity: 1;
+
+  }
+}
 
 .p-header__btn {
   height: inherit;

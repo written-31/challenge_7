@@ -50,6 +50,30 @@ jQuery(function ($) {
 
   });
 
+  // 近くまで来たら一行づつ表示
+  $(document).ready(function() {
+    $(document).ready(function() {
+        const targetElement = $('.p-top-message__body');
+        const triggerOffset = 50; // フェードインを開始する位置のオフセット（適宜調整）
+      
+        $(window).scroll(function() {
+            const windowHeight = $(window).height();
+            const scrollPosition = $(window).scrollTop();
+          
+            // スクロール位置が要素の上端から画面の下端まで近づいたら要素にフェードイン用のクラスを追加
+            if (targetElement.length > 0) {
+                const offsetTop = targetElement.offset().top;
+                if (scrollPosition > offsetTop - windowHeight + triggerOffset && !targetElement.hasClass('fadein-started')) {
+                    targetElement.addClass('fadein-started');
+                    targetElement.addClass('fadein');
+                }
+            }
+        });
+    });
+});
+
+  
+  
 
     //ハンバーガーメニュー
     $(".js-hamburger").on("click", function () {
@@ -67,40 +91,40 @@ jQuery(function ($) {
       }
     });
 
+
     // swiper
-    const swiper1 = new Swiper(".js-people-slider", {
-      loop: true,
-      // autoplay: {
-      //   delay: 4000,
-      //   disableOnInteraction: false,
-      // },
+      const swiper1 = new Swiper(".js-people-slider", {
+          // Swiperの設定
+          loop: true,
+          autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+          },
+          navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+              // ブレイクポイントごとの設定
+              320: {
+                  slidesPerView: 1.25,
+                  spaceBetween: 20,
+              },
+              425: {
+                  slidesPerView: 1.7,
+                  spaceBetween: 20,
+              },
+              768: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 24,
+              },
+              1440: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 64,
+              },
+          },
+      });
   
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1.25,
-          spaceBetween: 20,
-        },
-        425: {
-          slidesPerView: 1.7,
-          spaceBetween: 20,
-        },
-        // when window width is >= 640px
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 24,
-        },
-        1440: {
-          slidesPerView: 2.5,
-          spaceBetween: 64,
-        },
-      },
-    });
 
 
     $(document).ready(function() {

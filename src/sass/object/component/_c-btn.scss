@@ -29,6 +29,8 @@
 
 // ホバー時
 .c-btn:hover {
-  opacity: 1;
-  background-color: rgba($white, 0.7);
+  @include mq('md') {
+    opacity: 1;
+    background-color: rgba($white, 0.7);
+  }
 }

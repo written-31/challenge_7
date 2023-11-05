@@ -62,7 +62,7 @@ p {
 /*以下フェードイン表示の指定*/
 .fadein {
   opacity: 0;
-  animation: fadein 2s ease forwards;
+  animation: fadein 3s ease forwards;
 }
 @keyframes fadein {
   100% {  opacity: 1;}
